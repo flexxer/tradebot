@@ -1,0 +1,28 @@
+<apex:page controller="TradeBotController">
+    <apex:form id="mainForm" >
+        <apex:pageMessages id="messages" />
+        <apex:pageBlock title="Trade Details" >
+            <apex:pageBlockSection columns="1" >
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Stock" />
+                    <apex:inputText value="{!stock}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="From" />
+                    <apex:inputText value="{!dFrom}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="To" />
+                    <apex:inputText value="{!dTo}" />
+                </apex:pageBlockSectionItem>
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Cash" />
+                    <apex:inputText value="{!cash}" />
+                </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+            	<apex:commandButton action="{!run}" value="Run Bot" />
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
